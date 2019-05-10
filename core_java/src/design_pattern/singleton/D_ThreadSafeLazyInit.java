@@ -1,10 +1,17 @@
 package design_pattern.singleton;
 
-public class D_ThreadSafeLazyInit {
+import java.io.Serializable;
+
+public class D_ThreadSafeLazyInit  implements Serializable {
 	
 	private static D_ThreadSafeLazyInit instance;
 	
-	private D_ThreadSafeLazyInit() {}
+	private D_ThreadSafeLazyInit() {
+		
+		if(instance!=null)
+			throw new IllegalStateException("Singleton already instiatated");
+		
+	}
 	
 	
 	// the issue in case of multi-threaded application

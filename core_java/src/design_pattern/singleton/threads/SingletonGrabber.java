@@ -1,15 +1,15 @@
 package design_pattern.singleton.threads;
 
-import design_pattern.singleton.D_ThreadSafeLazyInit;
+import design_pattern.singleton.B_EagerInitiWithStaticBlock;
 
 public class SingletonGrabber implements Runnable {
 
-	private D_ThreadSafeLazyInit instance;
+	private B_EagerInitiWithStaticBlock instance;
 	
 	@Override
 	public void run() {
 		
-		instance = D_ThreadSafeLazyInit.getInstance();
+		instance = B_EagerInitiWithStaticBlock.getInstance();
 		System.out.println(Thread.currentThread().getName() + " : instance hash = " + instance.hashCode());
 		
 	}
