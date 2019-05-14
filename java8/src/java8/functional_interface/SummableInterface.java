@@ -4,5 +4,7 @@ package java8.functional_interface;
 public interface SummableInterface {
 	
 	public int sum(int a, int b);
+
+
 	
 }
