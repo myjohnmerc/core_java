@@ -53,7 +53,8 @@ public class Demo {
 
 	}
 
-	// functional way of finding prime number
+	// functional way of finding prime number 
+	
 	private static boolean isPrime(int number) {
 		return number > 1 && IntStream.range(2, number).noneMatch(index -> number % index == 0);
 
